@@ -24,7 +24,19 @@ class MyApp extends StatelessWidget {
               child:
             Text('Choose one of the following:', style: TextStyle(fontSize: 18), textAlign: TextAlign.center),
             ),
-          ]
+            ElevatedButton(
+              child: Text('Register'),
+              onPressed: null,
+            ),
+            ElevatedButton(
+              child: Text('Login'),
+              onPressed: null,
+            ),
+            ElevatedButton(
+              child: Text('Contact'),
+              onPressed: null,
+            ),
+          ],
         ),
       ),
     );
