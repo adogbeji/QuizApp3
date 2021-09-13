@@ -16,6 +16,16 @@ class MyApp extends StatelessWidget {
           Text('Questionnaire App!', style: TextStyle(fontSize: 24), textAlign: TextAlign.center),
           ),
         ),
+        body: Column(
+          children: <Widget>[
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.all(7),
+              child:
+            Text('Choose one of the following:', style: TextStyle(fontSize: 18), textAlign: TextAlign.center),
+            ),
+          ]
+        ),
       ),
     );
   }
