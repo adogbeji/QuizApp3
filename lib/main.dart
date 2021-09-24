@@ -6,7 +6,14 @@ void main() {
 
 // For Next Time: Convert StatelessWidget --> StatefulWidget!
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
   var indexValue = 3;
 
   void clickButton() {
