@@ -4,7 +4,7 @@ void main() {
   runApp(MyApp());
 }
 
-// For Next Time: Convert StatelessWidget --> StatefulWidget!
+// For Next Time: Protect State class, properties and methods
 
 class MyApp extends StatefulWidget {
   @override
@@ -17,8 +17,10 @@ class MyAppState extends State<MyApp> {
   var indexValue = 3;
 
   void clickButton() {
-    indexValue -= 1;
-    print(indexValue);
+    setState(() {
+      indexValue -= 1;
+      print(indexValue);  
+    });
   }
   @override
   Widget build(BuildContext context) {
