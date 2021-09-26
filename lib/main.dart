@@ -9,17 +9,17 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> {
-  var indexValue = 3;
+class _MyAppState extends State<MyApp> {
+  var _indexValue = 3;
 
-  void clickButton() {
+  void _clickButton() {
     setState(() {
-      indexValue -= 1;
-      print(indexValue);  
+      _indexValue -= 1;
+      print(_indexValue);  
     });
   }
   @override
@@ -45,19 +45,19 @@ class MyAppState extends State<MyApp> {
               width: double.infinity,
               margin: EdgeInsets.all(7),
               child:
-            Text(questions[indexValue], style: TextStyle(fontSize: 18), textAlign: TextAlign.center),
+            Text(questions[_indexValue], style: TextStyle(fontSize: 18), textAlign: TextAlign.center),
             ),
             ElevatedButton(
               child: Text('Register'),
-              onPressed: clickButton,
+              onPressed: _clickButton,
             ),
             ElevatedButton(
               child: Text('Login'),
-              onPressed: clickButton,
+              onPressed: _clickButton,
             ),
             ElevatedButton(
               child: Text('Contact'),
-              onPressed: clickButton,
+              onPressed: _clickButton,
             ),
           ],
         ),
