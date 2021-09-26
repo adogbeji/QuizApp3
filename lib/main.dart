@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+import './questions.dart';
+
 void main() {
   runApp(MyApp());
 }
 
-// For Next Time: Protect State class, properties and methods
+// For Next Time: Convert list of questions --> list of maps with corresponding answers
 
 class MyApp extends StatefulWidget {
   @override
@@ -34,19 +36,13 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Container(
-            width: double.infinity, 
-            child:
-          Text('Questionnaire App!', style: TextStyle(fontSize: 24), textAlign: TextAlign.center),
+            width: double.infinity,
+            child: Text('Questionnaire App', style: TextStyle(fontSize: 26), textAlign: TextAlign.center,),
           ),
         ),
         body: Column(
           children: <Widget>[
-            Container(
-              width: double.infinity,
-              margin: EdgeInsets.all(7),
-              child:
-            Text(questions[_indexValue], style: TextStyle(fontSize: 18), textAlign: TextAlign.center),
-            ),
+            Question(questions[_indexValue]),
             ElevatedButton(
               child: Text('Register'),
               onPressed: _clickButton,
